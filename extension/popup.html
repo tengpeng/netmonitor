@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Diagnose</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Network Diagnose</h1>
+        <p class="subtitle">Quick stats for your connection</p>
+      </div>
+      <button id="refresh">Refresh</button>
+    </header>
+
+    <section id="connection">
+      <h2>Connection</h2>
+      <div class="grid" id="connection-grid">
+        <div class="metric"><span class="label">Downlink</span><span id="downlink">—</span></div>
+        <div class="metric"><span class="label">RTT</span><span id="rtt">—</span></div>
+        <div class="metric"><span class="label">Effective type</span><span id="effectiveType">—</span></div>
+        <div class="metric"><span class="label">Save data</span><span id="saveData">—</span></div>
+        <div class="metric"><span class="label">Updated</span><span id="connection-updated">—</span></div>
+      </div>
+      <p class="hint" id="connection-hint"></p>
+    </section>
+
+    <section id="requests">
+      <h2>Request summary</h2>
+      <div class="grid" id="request-grid">
+        <div class="metric"><span class="label">Total</span><span id="total">0</span></div>
+        <div class="metric"><span class="label">Success</span><span id="success">0</span></div>
+        <div class="metric"><span class="label">HTTP errors</span><span id="failure">0</span></div>
+        <div class="metric"><span class="label">Network errors</span><span id="network-error">0</span></div>
+        <div class="metric"><span class="label">Updated</span><span id="stats-updated">—</span></div>
+      </div>
+    </section>
+
+    <section id="problematic">
+      <h2>Problematic requests</h2>
+      <ul id="problem-list"></ul>
+      <p class="hint" id="problem-hint"></p>
+    </section>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
